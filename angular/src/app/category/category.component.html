@@ -1,0 +1,20 @@
+<!-- <p>Giá trị của Params là: <span class="mark"><b>{{ value_params }}</b></span></p> -->
+
+<div class="main__content">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let i of product_list">
+            <div class="products">
+                <a routerLink="/product/{{ i.slug }}">
+                    <img src="/assets/iphone.jpeg" alt="" class="img-fluid">
+                    <h3>{{ i.name }}</h3>
+                    <div class="price">
+                        <span *ngIf="i.price!=null else abc">{{ i.price | number }} vnđ</span>
+                        <ng-template #abc>
+                            Liên hệ
+                        </ng-template>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

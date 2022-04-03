@@ -1,0 +1,30 @@
+<!-- header -->
+<app-header [abc]="parent"></app-header>
+
+<!-- nav -->
+<app-nav></app-nav>
+
+<!-- main -->
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- sidebar -->
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-md-9">
+                <!-- home -->
+                <!-- <app-home></app-home> -->
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- footer -->
+<app-footer (callParent)="hello($event)"></app-footer>
+
+<!-- <div>Đây là nội dung của app.component</div>
+<br>
+<h5>Đây là nội dung của header.component</h5>
+<app-header></app-header> -->

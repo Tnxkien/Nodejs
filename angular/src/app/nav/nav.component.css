@@ -1,0 +1,29 @@
+.nav__list{
+    background: gray;
+    padding: 20px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.nav__list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav__list ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav__list ul li a{
+    color: black;
+}
+.nav__list ul li a:hover{
+    color: #dfc171;
+}
+.nav__search{
+    background: black;
+    padding: 12px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    text-align: center;
+}

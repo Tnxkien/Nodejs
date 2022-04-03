@@ -1,0 +1,63 @@
+<!-- <p>Giá trị của Params là: <span class="mark"><b>{{ value_params }}</b></span></p> -->
+<div class="main__content">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="img">
+                <img src="/assets/iphone.jpeg" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="info">
+                <h1>{{ product_name }}</h1>
+                <div class="start">
+                    <i class="fa fa-star color-yellow"></i>
+                    <i class="fa fa-star color-yellow"></i>
+                    <i class="fa fa-star color-yellow"></i>
+                    <i class="fa fa-star color-yellow"></i>
+                    <i class="fa fa-star"></i>
+                    (200 Views)
+                </div>
+                <div class="price">
+                    Giá: <b>{{ product_price | number }}</b> vnđ
+                </div>
+                <div class="social-networks">
+                    <a href="">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="form">
+                    <input type="number" min="1" max="500" value="1">
+                    <button type="button" class="addToCart">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="title">
+                Chi tiết sản phẩm
+            </div>
+            <div class="content">
+                <div [innerHTML]="product_content"></div>
+            </div>
+            <div class="title">
+                Sản phẩm liên quan
+            </div>
+            <div class="relative-products">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

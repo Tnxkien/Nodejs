@@ -1,0 +1,58 @@
+<div class="main__content">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let i of product_list">
+            <div class="products">
+                <a routerLink="/product/{{ i.slug }}">
+                    <img src="/assets/iphone.jpeg" alt="" class="img-fluid">
+                    <h3>{{ i.name }}</h3>
+                    <div class="price">
+                        <span *ngIf="i.price!=null else abc">{{ i.price | number }} vnđ</span>
+                        <ng-template #abc>
+                            Liên hệ
+                        </ng-template>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- {{ title }} -->
+
+    <!-- <hr> -->
+
+    <!-- if -->
+    <!-- <div *ngIf="title=='hello1' else abc">
+        <h3>Đây là chuỗi</h3>
+    </div>
+    <ng-template #abc>
+        <h3>Đây là số</h3>
+    </ng-template> -->
+    <!-- end if -->
+
+    <!-- <hr> -->
+
+    <!-- switch -->
+    <!-- <div [ngSwitch]="title">
+        <h4 *ngSwitchCase="'hello'">Đây là Text</h4>
+        <h4 *ngSwitchCase="'hello1'">Đây là Số</h4>
+        <h4 *ngSwitchCase="'hello2'">Đây là kí tự đặc biệt</h4>
+    </div> -->
+    <!-- end switch -->
+
+    <!-- <hr> -->
+
+    <!-- vòng lặp for -->
+    <!-- <ul>
+        <li *ngFor="let i of array">{{ i }}</li>
+    </ul> -->
+    <!-- end for -->
+
+    <!-- style -->
+    <!-- <p style="color: red;">style css red</p>
+    <p [style.color]="'green'">style css green</p>
+    <p [style.color]="black">style css black</p> -->
+    <!-- end style -->
+</div>

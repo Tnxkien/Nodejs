@@ -1,0 +1,22 @@
+<div class="sidebar__title">
+    <i class="fa fa-list"></i> 
+    Danh Mục Sản Phẩm 
+</div>
+
+<div class="sidebar__list">
+    <ul>
+        <li *ngFor="let i of sidebar">
+            <a routerLink="/category/{{ i.slug }}">
+                {{ i.name }}
+            </a>
+            <!-- con cấp 1 -->
+            <ul style="padding-left: 30px;background: #808080; border: none;">
+                <li *ngFor="let j of i.childs">
+                    <a routerLink="/category/{{ j.slug }}">
+                        {{ j.name }}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
